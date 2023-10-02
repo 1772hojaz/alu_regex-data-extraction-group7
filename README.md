@@ -6,16 +6,16 @@ Welcome to the "Regex - Onboarding Hackathon" project! This project is a part of
 
 ## Table of Contents
 
-- [Get Started](#Get)
-- [Repository Structure](#Repository)
-- [Project Overview](#Project)
-- [Challenges](#Challenges)
-- [Implementation](#Implementation)
-- [Testing](#Testing)
-- [Usage](#Usage)
-- [Contributions](#Contributions)
-- [License](#License)
-- [Acknowledgments](#Acknowledgments)
+- [Get Started](#get-started)
+- [Repository Structure](#repository-structure)
+- [Project Overview](#project-overview)
+- [Challenges](#challenges)
+- [Implementation](#implementation)
+- [Testing](#testing)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Get Started
 
