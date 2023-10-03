@@ -1,5 +1,5 @@
 // Import the mock data generation function for color
-const generateMockColorData = require('./mock-data/color-data.js');
+const generateMockColorData = require('../../mock-data/color-data.js');
 
 // Function to extract RGB color values using regex
 function extractColorInfo(apiResponse) {
@@ -23,8 +23,7 @@ function extractColorInfo(apiResponse) {
 // Generate mock color data
 const mockColorData = generateMockColorData();
 
-// Simulate using mock data in the color file
-const extractedData = extractColorInfo(mockColorData);
-
 // Log the extracted data
-console.log('Extracted Data:', extractedData);
+console.log('Extracted Data:', mockColorData);
+
+module.exports = extractColorInfo; // Export the function

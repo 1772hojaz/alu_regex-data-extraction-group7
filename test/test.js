@@ -1,7 +1,7 @@
 // Test Case for color challenge file
 const assert = require('assert'); // Include Node.js assert module
 
-const extractColorInfo = require('./challenges/colors/colors.js'); // Import color extraction function
+const extractColorInfo = require('../challenges/colors/colors.js'); // Import color extraction function
 
 describe('Color Extraction', () => {
     it('should correctly extract RGB color values', () => {
