@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "faker": "^6.6.6"
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
