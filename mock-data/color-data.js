@@ -8,6 +8,11 @@ function generateMockColorData() {
     const green = faker.random.number(255);
     const blue = faker.random.number(255);
 
+    // For the file to return fixed RGB values instead of random ones
+    // Return a specific RGB color (e.g., red)
+    // const mockColorData = 'rgb(255, 0, 0)';
+
+
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
