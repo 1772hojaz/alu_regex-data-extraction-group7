@@ -20,4 +20,7 @@ function extractColorInfo(apiResponse) {
     }
 }
 
+const apiResponse = generateMockColorData();
+const colorData = extractColorInfo(apiResponse);
+console.log("Color Data:", colorData);
 // module.exports = extractColorInfo;
