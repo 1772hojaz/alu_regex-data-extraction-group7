@@ -1,10 +1,14 @@
 // Import Faker.js
 const faker = require('faker');
 
-// Generate mock color data
+// Generate mock RGB color data
 function generateMockColorData() {
-    const color = faker.commerce.color();
-    return `rgb(${faker.random.number(255)}, ${faker.random.number(255)}, ${faker.random.number(255)})`;
+    // Generate random RGB values
+    const red = faker.random.number(255);
+    const green = faker.random.number(255);
+    const blue = faker.random.number(255);
+
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
 module.exports = generateMockColorData;
