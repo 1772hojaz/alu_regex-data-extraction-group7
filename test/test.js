@@ -1,6 +1,6 @@
-// Test Case for color challenge file
 const assert = require('assert'); // Include Node.js assert module
 
+// Test Case for color challenge file
 const extractColorInfo = require('../challenges/colors/colors.js'); // Import color extraction function
 
 describe('Color Extraction', () => {
@@ -17,5 +17,25 @@ describe('Color Extraction', () => {
         const extractedData = extractColorInfo(mockColorData);
 
         assert.strictEqual(extractedData, null); // No match found
+    });
+});
+
+// Test Case for email addresses challenge file
+const extractEmailAddresses = require('../challenges/email-addresses/email-addresses.js'); // Import email address extraction function
+
+describe('Email Address Extraction', () => {
+    it('should correctly extract email addresses', () => {
+        const mockEmailData = 'user@example.com, test123@gmail.com, info@company.co';
+        const extractedEmailAddresses = extractEmailAddresses(mockEmailData);
+        const expectedEmailAddresses = ['user@example.com', 'test123@gmail.com', 'info@company.co'];
+
+        assert.deepStrictEqual(extractedEmailAddresses, expectedEmailAddresses);
+    });
+
+    it('should handle no email addresses found', () => {
+        const mockEmailData = 'This is some random text without email addresses';
+        const extractedEmailAddresses = extractEmailAddresses(mockEmailData);
+
+        assert.strictEqual(extractedEmailAddresses, null); // No email addresses found
     });
 });
