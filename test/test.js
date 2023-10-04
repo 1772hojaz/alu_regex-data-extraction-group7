@@ -59,3 +59,27 @@ describe('Event Info Extraction', () => {
         assert.strictEqual(extractedEventInfo, null); // No event info found
     });
 });
+
+// Test Case for news headlines challenge file
+const extractHeadlines = require('../challenges/headlines/headlines.js'); // Import headlines extraction function
+
+describe('Headlines Extraction', () => {
+    it('should correctly extract news headlines', () => {
+        const mockNewsData = 'Breaking News: A Major Event in the World';
+        const extractedHeadlines = extractHeadlines(mockNewsData);
+        const expectedHeadlines = {
+            headline: 'Breaking News',
+            subheader: 'A Major Event in the World',
+        };
+
+        assert.deepStrictEqual(extractedHeadlines, expectedHeadlines);
+    });
+
+    it('should handle no headlines found', () => {
+        const mockNewsData = 'No headlines in this text.';
+        const extractedHeadlines = extractHeadlines(mockNewsData);
+
+        assert.strictEqual(extractedHeadlines, null); // No headlines found
+    });
+});
+
