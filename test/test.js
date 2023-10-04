@@ -149,3 +149,27 @@ describe('Restaurant Data Extraction', () => {
         assert.strictEqual(extractedRestaurantData, null); // No restaurant data found
     });
 });
+
+// Test Case for usernames challenge file
+const extractUsernames = require('../challenges/usernames/usernames.js');
+
+describe('Usernames Extraction', () => {
+    it('should correctly extract social media usernames', () => {
+        const mockSocialMediaData = '@user123, @test_user, @company_xyz';
+        const extractedUsernames = extractUsernames(mockSocialMediaData);
+        const expectedUsernames = ['@user123', '@test_user', '@company_xyz'];
+
+        console.log('Extracted Usernames:', extractedUsernames); // Log the extracted data
+
+        assert.deepStrictEqual(extractedUsernames, expectedUsernames);
+    });
+
+    it('should handle no usernames found', () => {
+        const mockSocialMediaData = 'No usernames in this text.';
+        const extractedUsernames = extractUsernames(mockSocialMediaData);
+
+        console.log('Extracted Usernames:', extractedUsernames); // Log the extracted data
+
+        assert.strictEqual(extractedUsernames, null); // No usernames found
+    });
+});
