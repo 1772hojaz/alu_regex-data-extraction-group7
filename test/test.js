@@ -39,3 +39,23 @@ describe('Email Address Extraction', () => {
         assert.strictEqual(extractedEmailAddresses, null); // No email addresses found
     });
 });
+
+// Test Case for event info challenge file
+const extractEventInfo = require('../challenges/event-infos/event-info.js'); // Import event info extraction function
+
+describe('Event Info Extraction', () => {
+    it('should correctly extract event info', () => {
+        const mockEventData = 'Oct 15, 2023, 03:30 PM';
+        const extractedEventInfo = extractEventInfo(mockEventData);
+        const expectedEventInfo = 'Oct 15, 2023, 03:30 PM';
+
+        assert.strictEqual(extractedEventInfo, expectedEventInfo);
+    });
+
+    it('should handle no event info found', () => {
+        const mockEventData = 'No event info in this text.';
+        const extractedEventInfo = extractEventInfo(mockEventData);
+
+        assert.strictEqual(extractedEventInfo, null); // No event info found
+    });
+});
