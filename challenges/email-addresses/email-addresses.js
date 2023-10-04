@@ -1,3 +1,4 @@
+#!/usr/bin/node
 // Import the mock data generation function for email addresses
 const generateMockEmailData = require('../../mock-data/email-addresses-data.js');
 
