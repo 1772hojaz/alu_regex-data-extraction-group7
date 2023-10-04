@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 // Import the mock data generation function for event info
 const generateMockEventData = require('../../mock-data/event-info-data.js');
 
