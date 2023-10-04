@@ -1,13 +1,18 @@
-// Function to extract social media usernames
-function extractSocialMediaInfo(apiResponse) {
-    const regex = /@([A-Za-z0-9_]+)/;
+#!/usr/bin/node
+
+// Import Faker.js
+const faker = require('faker');
+
+// Function to extract social media usernames using regex
+function extractUsernames(apiResponse) {
+    const regex = /@(\w+)/g; // A pattern for usernames starting with '@'
     const matches = apiResponse.match(regex);
 
     if (matches) {
-        return matches[1];
+        return matches;
     } else {
-        return null; // No match found
+        return null; // No matches found
     }
 }
 
-module.exports = extractSocialMediaInfo;
+module.exports = extractUsernames;
