@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 // Import the mock data generation function for headlines
 const generateMockNewsData = require('../../mock-data/news-headlines-data.js');
 
