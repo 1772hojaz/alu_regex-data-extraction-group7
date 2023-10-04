@@ -2,7 +2,7 @@
 
 Welcome to the "Regex - Onboarding Hackathon" project! This project is a part of the onboarding process for our team and is designed to help you learn and practice data extraction using regular expressions in JavaScript.
 
-![Project Preview](page-review.jpg)
+![Project Preview](./Images/page-overview.png)
 
 ## Table of Contents
 
@@ -16,20 +16,26 @@ Welcome to the "Regex - Onboarding Hackathon" project! This project is a part of
 - [Contributions](#contributions)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+- [Contact Information](#contact-information)
 
 ## Get Started
 
-1. Clone this repository to your local development environment.
+1. Clone this repository: `https://github.com/1772hojaz/alu_regex-data-extraction-group7.git`
 
-2. Choose your preferred JavaScript code editor or IDE to work on the project.
+2. Choose your preferred JavaScript code editor or IDE to work on the project (We recommend VS Code preferably).
 
-3. Start implementing and testing the data extraction functions.
+3. Navigate to the project directory: cd `alu_regex-data-extraction-group7`
 
-4. Have fun and happy coding!
+4. Install the latest versions of these dependencies: `node.js`, `npm` or `nvm` and `mocha` if your machine is not up-to-date.
+
+5. Start implementing and testing the data extraction functions.
+
+6. Have fun and happy coding!
 
 ## Repository Structure
 
-- `data-extraction.js`: This file contains the code for all challenges, including the functions for data extraction.
+- `challenges`: This folder contains the code for all challenges, including the functions for data extraction.
+- `mock-data`: This folder contains subfolders of the mock data files that `faker.js` generated.
 - `test.js`: You can write your test cases and conduct testing in this file.
 - `README.md`: You're currently reading it! This document provides an overview of the project.
 
@@ -50,6 +56,8 @@ There are 8 challenges in this project and they are the data types the product t
 7. Event dates and times
 8. Email addresses
 
+![RGB color values challenge](./Images/color-challenge-file.png)
+
 ## Implementation
 
 We are using JavaScript for implementation. In the code, we created functions to extract data for each challenge based on the provided patterns. Regular expressions will be our primary tool for data extraction.
@@ -57,6 +65,8 @@ We are using JavaScript for implementation. In the code, we created functions to
 ## Testing
 
 To ensure the correctness of our functions, we created test cases for each challenge. We tested our functions with different API responses, including valid data, edge cases, and cases where no matches are found. Manual testing and automated testing using JavaScript testing frameworks are both encouraged and we did use them.
+
+![Test File](./Images/test-file.png)
 
 ## Usage
 
@@ -67,14 +77,21 @@ const apiResponse = "Raw API Response Data";
 const extractedData = extractDataFunction(apiResponse);
 console.log(extractedData);
 ```
+
 ## Contributions
 
 Contributions are welcome! If you have any suggestions or improvements, please feel free to open an issue or submit a pull request.
 
 ## License
 
-This project should be licensed under the MIT License. See the [LICENSE](LICENSE) file later for details.
+This project is licensed under the [African Leadership University, ALU Rwanda].
 
 ## Acknowledgments
 
-This project is inspired by real-world data extraction challenges often encountered in software development. We hope it helps you sharpen your regular expression and data extraction skills.
+This project used external libraries and it is inspired by real-world data extraction challenges often encountered in software development. We hope it helps you sharpen your regular expression and data extraction skills when you try it :)
+
+## Contact Information
+
+For inquiries and support, feel free to contact our team at [e.adewusi@alustudent.com].
+
+![Full Test File](./Images/code.png)
