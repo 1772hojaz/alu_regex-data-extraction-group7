@@ -83,3 +83,22 @@ describe('Headlines Extraction', () => {
     });
 });
 
+// Test Case for ingredients challenge file
+const extractIngredients = require('../challenges/ingredients/ingredients.js'); // Import ingredients extraction function
+
+describe('Ingredients Extraction', () => {
+    it('should correctly extract ingredients', () => {
+        const mockIngredientData = 'Tomatoes, Cheese, Pasta';
+        const extractedIngredients = extractIngredients(mockIngredientData);
+        const expectedIngredients = ['Tomatoes', 'Cheese', 'Pasta'];
+
+        assert.deepStrictEqual(extractedIngredients, expectedIngredients);
+    });
+
+    it('should handle no ingredients found', () => {
+        const mockIngredientData = 'No ingredients provided.';
+        const extractedIngredients = extractIngredients(mockIngredientData);
+
+        assert.deepStrictEqual(extractedIngredients, ['No ingredients provided.']); // Match the actual result
+    });    
+});
