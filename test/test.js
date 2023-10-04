@@ -129,3 +129,23 @@ describe('Product Codes Extraction', () => {
         assert.strictEqual(extractedProductCodes, null); // No product codes found
     });
 });
+
+// Test Case for restaurant challenge file
+const extractRestaurantData = require('../challenges/restaurant/restaurant.js');
+
+describe('Restaurant Data Extraction', () => {
+    it('should correctly extract restaurant data', () => {
+        const mockRestaurantData = 'Delicious Eats - Italian';
+        const extractedRestaurantData = extractRestaurantData(mockRestaurantData);
+        const expectedRestaurantData = { name: 'Delicious Eats', cuisine: 'Italian' };
+
+        assert.deepStrictEqual(extractedRestaurantData, expectedRestaurantData);
+    });
+
+    it('should handle no restaurant data found', () => {
+        const mockRestaurantData = 'No restaurant data available';
+        const extractedRestaurantData = extractRestaurantData(mockRestaurantData);
+
+        assert.strictEqual(extractedRestaurantData, null); // No restaurant data found
+    });
+});
