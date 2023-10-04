@@ -102,3 +102,30 @@ describe('Ingredients Extraction', () => {
         assert.deepStrictEqual(extractedIngredients, ['No ingredients provided.']); // Match the actual result
     });    
 });
+
+// Test Case for product codes challenge file
+const extractProductCodes = require('../challenges/product-codes/product-codes.js');
+const generateMockProductData = require('../mock-data/product-codes-data');
+
+describe('Product Codes Extraction', () => {
+    it('should correctly extract valid product codes', () => {
+        const mockProductData = generateMockProductData();
+        const extractedProductCodes = extractProductCodes(mockProductData);
+    
+        // The generated data is already valid product codes, so we expect it to match.
+        assert.deepStrictEqual(extractedProductCodes, mockProductData.match(/[A-Z]{2}\d{3}/g));
+        
+        if (extractedProductCodes) {
+            console.log('Extracted Product Codes:', extractedProductCodes);
+        } else {
+            console.log('No valid product codes found.');
+        }
+    });    
+
+    it('should handle no valid product codes found', () => {
+        const mockProductData = 'No product codes provided';
+        const extractedProductCodes = extractProductCodes(mockProductData);
+
+        assert.strictEqual(extractedProductCodes, null); // No product codes found
+    });
+});
