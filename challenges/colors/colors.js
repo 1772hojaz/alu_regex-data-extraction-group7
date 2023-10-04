@@ -1,3 +1,4 @@
+#!/usr/bin/node
 // Import the mock data generation function for color
 const generateMockColorData = require('../../mock-data/color-data.js');
 
